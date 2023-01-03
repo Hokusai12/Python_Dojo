@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        label, p{
+            color: white;
+        }
+    </style>
+    <title>Survey</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <form class="d-flex flex-column justify-content-space-between bg-black p-4 col-4 rounded" action="/process" method="POST">
+            <div class="name d-flex justify-content-between mb-2">
+                <label for="name">Your Name:</label>
+                <input class="col-7" type="text" name="name" id="name">
+            </div>
+            <div class="enrolled d-flex justify-content-between align-items-center mb-2">
+                <p>Enrolled: </p>
+                <div class="buttons">
+                    <label for="enrolled">Yes</label>
+                    <input type="radio" name="enrollment" id="enrolled" value="Enrolled">
+                    <label for="unenrolled">No</label>
+                    <input type="radio" name="enrollment" id="unenrolled" value="Unenrolled">
+                </div>
+            </div>
+            <div class="dojo_loc d-flex justify-content-between mb-2">
+                <label for="dojo_loc">Dojo Location:</label>
+                <select class="col-7" name="dojo_loc" id="dojo_loc">
+                    <option value="Tulsa">Tulsa, OK</option>
+                    <option value="Dallas">Dallas, TX</option>
+                    <option value="Kansas City">Kansas City, MO</option>
+                    <option value="Chicago">Chicago, IL</option>
+                    <option value="Los Angeles">Los Angeles, CA</option>
+                    <option value="Boise">Boise, ID</option>
+                    <option value="Orange County">Costa Mesa, CA</option>
+                    <option value="Seattle">Seattle, WA</option>
+                    <option value="Sunnyvale">Sunnyvale, CA</option>
+                    <option value="Oakland">Oakland, CA</option>
+                    <option value="Remote">Remote</option>
+                    <option value="N/A">N/A</option>
+                </select>
+            </div>
+            <div class="stacks d-flex justify-content-between mb-2">
+                <p>Stacks: </p>
+                <div class="checkboxes">
+                    <label for="python">Python</label>
+                    <input type="checkbox" name="stacks" id="python" value="Python">
+                    <label for="java">Java</label>
+                    <input type="checkbox" name="stacks" id="java" value="Java">
+                    <label for="mern">MERN</label>
+                    <input type="checkbox" name="stacks" id="mern" value="MERN">
+                </div>
+            </div>
+            <div class="fav_lang d-flex justify-content-between mb-2">
+                <label for="fav_lang">Favorite Language: </label>
+                <select class="col-7" name="fav_lang" id="fav_lang">
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="Go">Go</option>
+                    <option value="Java">Java</option>
+                    <option value="Kotlin">Kotlin</option>
+                    <option value="PHP">PHP</option>
+                    <option value="C#">C#</option>
+                    <option value="Swift">Swift</option>
+                    <option value="R">R</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="C and C++">C and C++</option>
+                    <option value="Matlab">Matlab</option>
+                    <option value="Typescript">Typescript</option>
+                    <option value="Scala">Scala</option>
+                    <option value="SQL">SQL</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="NoSQL">NoSQL</option>
+                    <option value="Rust">Rust</option>
+                    <option value="Perl">Perl</option>
+                </select>
+            </div>
+            <label for="comment">Comment (optional):</label>
+            <textarea name="comment" id="comment" rows="4"></textarea>
+            <input class="bg-warning text-black mt-4 col-4 align-self-center rounded-pill" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Results</title>
+</head>
+<body>
+    <div class="container col-3 p-3 rounded bg-black d-flex flex-column text-white">
+        <div class="d-flex justify-content-between">
+            <p class="text-primary">Your Name:</p>
+            <p>{{name}}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="text-primary">Enrollment:</p>
+            <p>{{enrollment}}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="text-primary">Stacks:</p>
+            <div class="stacks">
+                {% for stack in stacks %}
+                    <p class="d-inline">{{stack}}|</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="text-primary">Dojo Location:</p>
+            <p>{{dojo_loc}}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="text-primary">Favorite Language:</p> 
+            <p>{{fav_lang}}</p>
+        </div>
+        <p class="text-primary">Comment:</p>
+        <p>{{comment}}</p>
+
+        <a href="/" class="align-self-center"><button class="mb-2 btn btn-md bg-warning text-black">Go Back!</button></a>
+    </div>
+</body>
+</html>
