@@ -6,6 +6,10 @@ app = Flask(__name__)
 def display_users():
     return render_template("users.html", all_users=User.get_all())
 
+@app.route('/users/<int:user_id>')
+def display_user(user_id):
+    return render_template("specific_user.html", user=User.get_one_user(user_id))
+
 @app.route('/users/new')
 def new_user_form():
     return render_template('create_user.html')

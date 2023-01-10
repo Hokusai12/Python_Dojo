@@ -22,6 +22,17 @@ class User:
         return users
 
     @classmethod
+    def get_one_user(cls, user_id):
+        query = "SELECT * FROM users WHERE id=%(id)s;"
+        data = {
+            'id': user_id
+        }
+        result = connectToMySQL('users_schema').query_db(query, data)
+        user=cls(result[0])
+        return user
+
+
+    @classmethod
     def save(cls, data):
         query = "INSERT INTO users (first_name, last_name, email, created_at, updated_at) VALUES (%(first_name)s, %(last_name)s, %(email)s, NOW(), NOW());"
         print(query)
