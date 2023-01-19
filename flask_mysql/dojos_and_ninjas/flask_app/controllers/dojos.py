@@ -22,3 +22,19 @@ def show_dojo(id):
     }
     dojo = Dojo.get_dojo_with_ninjas(data)
     return render_template("select_dojo.html", dojo=dojo)
+
+@app.route("/dojos/edit/<int:id>")
+def edit_dojo(id):
+    data = {
+        "id": id
+    }
+    return render_template("edit_dojo.html", dojo=Dojo.get_dojo(data))
+
+@app.route("/dojos/update/<int:id>", methods=["POST"])
+def update_dojo(id):
+    data = {
+        "name": request.form['name'],
+        "id": id
+    }
+    Dojo.update_dojo(data)
+    return redirect("/dojos")

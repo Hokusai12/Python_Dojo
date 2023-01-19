@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Dojos and Ninjas</title>
+</head>
+<body class="bg-dark mt-4">
+    <div class="container bg-secondary rounded d-flex flex-column col-5 p-4">
+        <h1 class="text-info">Edit Ninja</h1>
+        <form class="d-flex flex-column gap-2 align-self-center col-6" action="/ninjas/update" method="POST">
+            <input type="hidden" id="dojo_id" name="dojo_id" value={{ninja['dojo_id']|string}}>
+            <input type="hidden" id="id" name="id" value={{ninja['id']|string}}>
+            <div class="first_name d-flex justify-content-between text-white">
+                <label for="first_name">First Name: </label>
+                <input type="text" name="first_name" id="last_name" value={{ninja['first_name']|string}}>
+            </div>
+            <div class="last_name d-flex justify-content-between text-white">
+                <label for="last_name">Last Name: </label>
+                <input type="text" name="last_name" id="last_name" value={{ninja['last_name']|string}}>
+            </div>
+            <div class="age d-flex justify-content-between text-white">
+                <label for="age">Age: </label>
+                <input type="text" name="age" id="age" value={{ninja['age']|string}}>
+            </div>
+            <input class="btn bg-info" type="submit" value="Update">
+        </form>
+        <a class="text-warning" href={{"/dojos/" + ninja['dojo_id']|string}}>Back to Dojo</a>
+    </div>
+</body>
+</html>

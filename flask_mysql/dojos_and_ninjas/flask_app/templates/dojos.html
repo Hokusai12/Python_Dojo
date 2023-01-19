@@ -23,7 +23,10 @@
             <h1 class="align-self-start text-info mb-4">All Dojos</h1>
             <div id="dojo_list" class="container col-4 border border-3 border-dark rounded col-6">
                 {% for dojo in dojos %}
+                <div class="dojo d-flex justify-content-between">
                     <p><a class="text-warning" href={{"/dojos/" + dojo['id']|string}}>{{dojo['name']}}</a></p>
+                    <a class="text-warning" href={{"/dojos/edit/" + dojo['id']|string}}>Edit</a>
+                </div>
                 {% endfor %}
             </div>
             <p class="mt-4"><a class="text-warning" href="/ninjas">Add Ninja</a></p>
