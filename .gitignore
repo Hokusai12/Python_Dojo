@@ -1,8 +1,4 @@
 **/*.zip
 **/__pycache__
 /mysql
-<<<<<<< HEAD
 /exams
-=======
-**/*.mwb
->>>>>>> 251211c784dd93626c545c231a87aaa99a0a9c05
