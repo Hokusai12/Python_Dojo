@@ -1,5 +1,4 @@
 **/*.zip
-**/Pipfile
-**/Pipfile.lock
 **/__pycache__
 /mysql
+/exams
