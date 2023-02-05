@@ -23,7 +23,7 @@ async function getWeather(element) {
     let lat = coordinates[element.innerText][0];
     let lon = coordinates[element.innerText][1];
     let units = (tempUnit == 'C') ? "metric" : "imperial";
-    let apiURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=${units}&appid=6df301ae88e68d9ae6bedb8cb119b54d`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=${units}&appid={apiKey}`;
     let response = await fetch(apiURL);
     let weatherData = await response.json();
     
