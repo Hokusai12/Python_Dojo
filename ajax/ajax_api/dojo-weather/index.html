@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dojo Weather</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <h1>DojoWeather</h1>
+        <div class="cities">
+            <h3 onclick="getWeather(this)">Burbank</h3>
+            <h3 onclick="getWeather(this)">Chicago</h3>
+            <h3 onclick="getWeather(this)">Dallas</h3>
+        </div> 
+    </div>
+
+    <div class="content">
+        <div class="info-bar">
+            <h2 id="current-city">San Jose</h2>
+            <div class="change-units">
+                <label for="temp-units">Show temperature in </label>
+                <select onchange="changeUnits(this)" name="temp-units" id="temp-units">
+                    <option>&deg;C</option>
+                    <option>&deg;F</option>
+                </select>
+            </div>
+        </div>
+        
+        <hr style="height: 2px; background-color: black; margin-bottom: 15px;">
+
+        <div class="week-weather">
+            <div class="weather-tab">
+                <h3 id="today-header">Today</h3>
+                <img src="assets/some_rain.png" alt="Image of rainy clouds">
+                <p>some rain</p>
+                <div class="high-and-low">
+                    <h4 class="high">24&deg;</h4>
+                    <h4 class="low">18&deg;</h4>
+                </div>
+            </div>
+            <div class="weather-tab">
+                <h3 id="tomorrow-header">Tomorrow</h3>
+                <img src="assets/some_sun.png" alt="Image of sun shining">
+                <p>some sun</p>
+                <div class="high-and-low">
+                    <h4 class="high">27&deg;</h4>
+                    <h4 class="low">19&deg;</h4>
+                </div>
+            </div>
+            <div class="weather-tab">
+                <h3 id="day3-header"></h3>
+                <img src="assets/some_clouds.png" alt="Image of clouds">
+                <p>some clouds</p>
+                <div class="high-and-low">
+                    <h4 class="high">21&deg;</h4>
+                    <h4 class="low">16&deg;</h4>
+                </div>
+            </div>
+            <div class="weather-tab">
+                <h3 id="day4-header"></h3>
+                <img src="assets/some_sun.png" alt="Image of sun shining">
+                <p>some sun</p>
+                <div class="high-and-low">
+                    <h4 class="high">26&deg;</h4>
+                    <h4 class="low">21&deg;</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="cookie-popup">
+            <img src="assets/cookie.png" alt="Image of a cookie">
+            <div class="cookie-text">
+                <h4>Stop! Cookie time</h4>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <button onclick="hideCookieWindow()">I Accept</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
